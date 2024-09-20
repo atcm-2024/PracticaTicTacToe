@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/main2.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TickyToey</title>
+  </head>
+  <body>
+    <main>
+
+        <section class="section-ingreso" id="section-ingreso">
+            <!-- <div class="con"> -->
+            <div class="div-imagen">
+              <img src="assets/icon-x.svg" alt="icon x" class="img-ingreso" />
+              <img src="assets/icon-o.svg" alt="icon o" class="img-ingreso" />
+            </div>
+    
+            <div class="div-optJuegos">
+              <div class="div-titJuego">
+                <h1 class="titulo-optJuego">PICK PLAYER 1'S MARK</h1>
+              </div>
+              <div class="div-eleccion">
+                  <div class="div-elec-x">
+                      <button class="btn-X" Value="X">
+                        <img src="assets/icon-x-select.svg" alt="icon x" class="img-optSelect" />
+                      </button>
+                  </div>
+                  <div class="div-elec-o">
+                    <button class="btn-O" Value="O">
+                        <img src="assets/icon-o-select.svg" alt="icon o" class="img-optSelect" /> 
+                    </button>
+                  </div>
+              </div>
+              <div class="reminder">Remember: X goes first</div>        
+            </div>
+            
+            <div class="div-botones">
+              <div class="div-boton-PCPU"><button class="btnVsCPU" id="btnVsCPU">New Game (vs CPU)</button></div>
+              <div class="div-boton-PP"><button class="btnVsPlayer" id="btnVsPlayer">New Game (vs player)</button></div>
+            </div>
+          </section>
+
+
+    <div class="show_games hidden" id="show_games">
+      <div class="top">
+        <div class="exAndOh">
+          <button class="btn-headg1" id="btn-headg1">
+            <img src="assets/icon-x.svg" alt="icon x" class="img-ingreso" />
+          </button>             
+          <button class="btn-headg2" id="btn-headg2">
+            <img src="assets/icon-o.svg" alt="icon o" class="img-optSelect" />
+          </button>
+        </div>
+        <section class="turn">
+           <button class="btn-turn">
+             <span class="sp-turno">X</span>  TURN
+          </button>
+        </section>
+        <div>
+          <button class="clearScore" id="clear-score">
+            <img src="assets/icon-restart.svg" alt="icon o" class="img-optSelect" />
+          </button>
+        </div>
+      </div>
+      
+      <div class="game-container" id="tablero"> 
+        <ul>
+          <li class="box" id="1"></li>
+          <li class="box" id="2"></li>
+          <li class="box" id="3"></li>
+          <li class="box" id="4"></li>
+          <li class="box" id="5"></li>
+          <li class="box" id="6"></li>
+          <li class="box" id="7"></li>
+          <li class="box" id="8"></li>
+          <li class="box" id="9"></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul>
+          <li class="player-one-score">
+            <p>X(Player 1)</p>
+            <span id="player-one-score">0</span>
+          </li>
+          <li class="tie-score">
+            <p>TIES</p>
+            <span id="tie-score">0</span>
+          </li>
+          <li class="player-two-score">
+            <p>O(Player 2)</p>
+            <span id="player-two-score">0</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+      
+    <div class="game-restart"></div>
+    <div class="modal_games">
+      <div class="modal__box">
+        <div class="modal__content">
+          <p class="win__lose__text">Oh no, you lost</p>
+          <div class="winner__text__box">
+            <img src="assets/icon-o.svg" alt="winner icon" class="winner__icon" />
+            <h2 class="winner__text winner__o">takes the round</h2>
+          </div>
+          <div class="continue__box">
+            <p class="quit__box">quit</p>
+            <p class="next__round">next round</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="restart__modal">
+        <div class="restart__container">
+          <h2 class="restart__game">Restart game?</h2>
+          <div class="restart__game__box">
+            <p class="no__restart">no, cancel</p>
+            <p class="yes__restart">yes, restart</p>
+          </div>
+        </div>
+      </div>
+      <div class="tied__modal">
+        <div class="tied__container">
+          <h2 class="tied__game">round tied</h2>
+          <div class="tied__game__box">
+            <p class="quit__box">quit</p>
+            <p class="next__round">next round</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+  </body>
+</html>
